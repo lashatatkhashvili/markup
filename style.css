@@ -43,6 +43,7 @@ h2 {
   border: 2px solid rgba(35, 104, 252, 0.644);
   margin: 0 25px;
   border-radius: 10px;
+  background: none;
   cursor: pointer;
   outline: none;
 }
@@ -153,6 +154,7 @@ h2 {
   height: 50px;
   margin-left: -6px;
   border-radius: 5px;
+  background: none;
   font-size: 20px;
   cursor: pointer;
   outline: none;
@@ -174,19 +176,54 @@ h2 {
 @media (max-width: 900px) {
   .about {
     flex-direction: column;
-  }
-  .about__article-heading {
-    display: none;
+    justify-content: center;
+    align-items: center;
   }
 
-  .about__profile-heading {
-    display: block;
+  .about__article-heading {
+    display: none;
   }
 
   .about__profile {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .about__profile-heading {
+    display: block;
+    font-size: 25px;
+  }
+
+  .about__profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 80px;
+    margin-right: 30px;
+  }
+
+  .about__profile-social {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .about__profile-button {
+    width: 130px;
+    height: 50px;
+    margin: 0;
+  }
+
+  .about__contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about__article-paragraph {
+    margin-left: 25px;
   }
 }
 
@@ -197,7 +234,6 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 35px;
-  margin-bottom: 20px;
 }
 
 .portrait__icon {
