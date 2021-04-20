@@ -70,68 +70,57 @@ h2 {
 .main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: auto;
+  grid-template-areas:
+    "about about about about portrait portrait"
+    "about about about about services services"
+    "gallery gallery gallery gallery services services"
+    "reviews reviews reviews reviews content content";
+
   gap: 20px;
   margin: 40px 40px 0 100px;
 }
 
 .about {
-  grid-column: span 4;
+  grid-area: about;
   background: white;
 }
 
 .portrait {
-  grid-column: span 2;
-  height: fit-content;
+  grid-area: portrait;
   background: white;
 }
 
 .gallery {
-  grid-column: span 4;
+  grid-area: gallery;
   background: white;
 }
 
 .services {
-  grid-column: span 2;
-  height: fit-content;
+  grid-area: services;
+
   background: white;
 }
 
 .reviews {
-  grid-column: span 4;
+  grid-area: reviews;
   background: white;
 }
 
 @media (max-width: 900px) {
   .main {
     margin: 0;
-  }
-  .portrait {
-    grid-column: 1 / -1;
-    grid-row: 1;
-  }
-
-  .about {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-
-  .services {
-    grid-column: 1 / -1;
-    grid-row: 3;
-  }
-
-  .gallery {
-    grid-column: 1 / -1;
-    grid-row: 3;
-  }
-
-  .reviews {
-    grid-column: 1 / -1;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "portrait "
+      "about"
+      "services"
+      "gallery"
+      "reviews";
   }
 }
 
-/* Main */
+/* About */
 
 .about {
   display: flex;
@@ -199,4 +188,31 @@ h2 {
     justify-content: center;
     align-items: center;
   }
+}
+
+/* Portrait */
+
+.portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  margin-bottom: 20px;
+}
+
+.portrait__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  margin-right: 28px;
+}
+
+@media (max-width: 900px) {
+  .portrait {
+    margin-top: 20px;
+  }
+}
+
+.services {
+  background: green;
 }
