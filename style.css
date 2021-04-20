@@ -8,8 +8,10 @@ p {
   padding: 0;
 }
 
+h1,
 h2 {
   margin: 0;
+  padding: 0;
 }
 /* header */
 
@@ -51,7 +53,7 @@ h2 {
   padding: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .nav__right-wrapper {
     display: none;
   }
@@ -80,6 +82,7 @@ h2 {
 
 .portrait {
   grid-column: span 2;
+  height: fit-content;
   background: white;
 }
 
@@ -90,6 +93,7 @@ h2 {
 
 .services {
   grid-column: span 2;
+  height: fit-content;
   background: white;
 }
 
@@ -98,7 +102,7 @@ h2 {
   background: white;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .main {
     margin: 0;
   }
@@ -128,3 +132,71 @@ h2 {
 }
 
 /* Main */
+
+.about {
+  display: flex;
+}
+
+.about__profile {
+  padding: 50px;
+}
+
+.about__profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+}
+
+.about__profile-social {
+  display: flex;
+  padding: 25px 0;
+}
+
+.about__social-icon {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+}
+
+.about__profile-button {
+  border: 2px solid rgba(35, 104, 252, 0.644);
+  width: 165px;
+  height: 50px;
+  margin-left: -6px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.about__profile-heading {
+  display: none;
+}
+
+.about__article {
+  padding: 20px 0;
+}
+
+.about__article-paragraph {
+  font-size: 20px;
+  margin-right: 35px;
+}
+
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+  }
+  .about__article-heading {
+    display: none;
+  }
+
+  .about__profile-heading {
+    display: block;
+  }
+
+  .about__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
